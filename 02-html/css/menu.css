@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&family=Shadows+Into+Light&family=Tangerine&display=swap');
+
+body {
+    background: url(../imgs/bg.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+main {
+    margin: 2rem auto;
+    width: 34rem;
+}
+
+header h1 {
+    background-color: rgb(61, 61, 61);
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    border-bottom: 4px solid rgb(230, 161, 71);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a:link,
+nav li a:visited {
+    background-color: #0000006e;
+    color: rgb(255, 255, 255);
+    display: flex;
+    padding: 0.4rem;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+    transition: all 0.2s ease-in;
+    
+}
+
+nav li a i {
+    background-color: rgb(230, 161, 71);
+    padding: 0.6rem;
+    font-weight: 500;
+    font-size: 0.99rem;
+    margin-right: 0.8rem;
+    font-style: normal;
+    color: white;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    transition: all 0.2s 0.2s ease-in;
+}
+
+nav li a:hover {
+    background-color: #00000099;
+    color:rgb(230, 161, 71) ;
+}
+
+nav li a:hover i {
+    transform: scale(1.25);
+}
+
+img {
+    align-items: center;
+}

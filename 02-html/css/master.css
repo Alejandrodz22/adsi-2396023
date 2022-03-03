@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&family=Shadows+Into+Light&family=Tangerine&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(../imgs/bg.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+main {
+    margin: 2rem auto;
+    width: 34rem;
+}
+
+header h1 {
+    background-color: rgb(61, 61, 61);
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    border-bottom: 4px solid rgb(230, 161, 71);
+}
+
+header h1 a:link,
+header h1 a:visited {
+    background-color: rgb(127, 129, 129);
+    color: aliceblue;
+    float: left;
+    padding: 0 6px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+}
+
+header h1 a:hover {
+    background-color: rgb(139, 139, 139);
+    transform: translateX(-10px);
+}
+
+section {
+    background-color: #16161699;
+    color: rgb(255, 255, 255);
+    padding: 2rem;
+    min-height: 20rem;
+}
+
+ a:link,
+ a:visited {
+    background-color: rgb(127, 129, 129);
+    color: aliceblue;
+    float: left;
+    padding: 0 6px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+
+ }
