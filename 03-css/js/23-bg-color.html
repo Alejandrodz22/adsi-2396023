@@ -8,10 +8,19 @@
     <title> bg color </title>
     <link rel="stylesheet" href="../css/master.css">
     <style>
-        .bg {
-            background-color: pink;
-            color: black;
+        div.colombia {
+            margin: 20px auto;
+            width: 380px;
         }
+        div.colombia div {
+            height: 60px;
+        }
+        div.colombia div.yellow {
+            height: 100px;
+            background-color: rgba(255, 255, 0, 0.705);
+        }
+        div.blue {background-color: rgba(0, 0, 255, 0.63);}
+        div.red {background-color: rgba(255, 0, 0, 0.623);}
     </style>
 </head>
 <body>
@@ -20,7 +29,11 @@
             <h1><a href="../js/index.html"> 🏡 </a> bg color </h1>
         </header>
         <section> 
-            <div class="bg">Lorem ipsum, dolor sit amet consectetur</div>
+            <div class="colombia">
+                <div class="yellow"></div>
+                <div class="blue"></div>
+                <div class="red"></div>
+            </div>
         </section>
     </main>
 </body>

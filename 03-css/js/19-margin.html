@@ -5,22 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Template </title>
+    <title> Margin </title>
     <link rel="stylesheet" href="../css/master.css">
     <style>
-        .div {
-            border: 5px inset rgb(7, 99, 136);
-        background-color: lightblue;
-        text-align: center;
-        color: black;
-        width: 25rem;
-        height: 10rem;
-        margin-top: 5em;
-        margin-bottom: 5em;
-        margin-left: 1em;
-        margin-right: 5em;
-
-          }
+        .bg {
+            background: linear-gradient(135deg,#00000099 10%,transparent 0, transparent 50%,#00000099 0, #00000099 0, 60%, transparent 0, transparent); 
+            background-size: 7.07px 7.07px ;
+         }
+         div.parent {
+             position: absolute;
+             height: 340px;
+             width: 380px;
+             left: 50%;
+             transform: translateX(-50%);
+         }
+         div.child {
+             background-color: #fff;
+             font-size: 4rem;
+             text-align: center;
+             line-height: 12rem;
+             height: 200px;
+             width: 200px;
+             margin-top: 70px;
+             margin-left: 90px;
+             
+         }
 </style>
 
 </head>
@@ -30,10 +39,10 @@
             <h1><a href="../js/index.html"> 🏡 </a> Template </h1>
         </header>
         <section> 
-            <div class="div">
-                <h2>Boxes</h2>
-                <p>Boxes</p>
-                 </div>
+            <div class="parent bg">
+                <div class="child">Box</div>
+            </div>
+                
         </section>
     </main>
 </body>
