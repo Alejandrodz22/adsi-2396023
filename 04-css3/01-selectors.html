@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Template </title>
+    <link rel="stylesheet" href="../04-css3/css/master3.css">
+    <style>
+        section h3 {
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px dotted #000;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            width: 380px;
+        }
+        ul li {
+            border: 2px solid #000;
+            background-color: rgba(255, 255, 255, 0.705);
+            display: inline-block;
+            font-size: 1.8rem;
+            padding: 10px;
+            height: 40px;
+            margin: 4px;
+            width: 40px;
+            text-align: center;
+            font-weight: 500;
+        }
+        /*first-of-type*/
+        ul li:first-of-type {
+            background-color: rgb(118, 218, 72);
+        }
+        /*last-of-type*/
+        ul li:last-of-type {
+            background-color: rgb(204, 236, 129);
+        }
+        ul li:nth-of-type(2) {
+            background-color: rgb(248, 245, 55);
+        }
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 380px;
+        }
+        table td {
+            border: 2px solid #000;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.815);
+        }
+        table tr:nth-child(2n) td:nth-child(2n+1),
+        table tr:nth-child(2n+1) td:nth-child(2n) {
+            background-color: #000;
+        }
+        /*Home target*/
+        nav {
+            margin: 0 auto;
+            width: 350px;
+        }
+        nav a:link,
+        nav a:visited {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            margin: 10px;
+            text-decoration: none;
+            padding: 4px 10px;
+        }
+        div#home,
+        div#services,
+        div#contact {
+            margin: 0 auto;
+            width: 300px;
+            display:none;
+        }
+        #home:target,
+        #services:target,
+        #contact:target {
+            display: block;
+        }
+        /*:selection*/
+        article {
+            text-align: justify;
+        }
+        article p:first-child::selection {
+            background-color: rgb(245, 242, 61);
+        }
+        article p:first-child(2)::selection {
+            background-color: rgb(59, 22, 221);
+            color: #fff;
+        }
+        article p:last-child::selection {
+            background-color: rgb(250, 14, 14);
+            color: #fff;
+        }
+</style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="../js/index.html"> 🏡 </a> Template </h1>
+        </header>
+        <section> 
+            <h3>first-of-type | last-of-type | nth-child(n)</h3>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+            <h3>nth-child(n)</h3>
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <h3>#home:target</h3>
+            <nav>
+                <a href="#home">home</a>
+                <a href="#services">services</a>
+                <a href="#contact">contact</a>  
+            </nav>
+            <div id="home">
+                    <h4>Home</h4>
+                    <img src="http://placekitten.com/300/200" alt="">
+                </div>
+                <div id="services">
+                    <h4>Services</h4>
+                    <img src="http://placekitten.com/300/202" alt="">
+                </div>
+                <div id="contact">
+                    <h4>contact</h4>
+                    <img src="http://placekitten.com/300/204" alt="">
+                </div>
+            
+            <!---->
+            <article>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus accusamus atque, perferendis cumque, delectus ipsum amet nobis, ut voluptates laboriosam veritatis totam eos ullam iure.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, blanditiis.</p>
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, aliquam. Voluptate sapiente dicta sequi quidem ipsa, laudantium quo obcaecati praesentium adipisci at fuga recusandae officia quod, nihil possimus quasi excepturi!</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
