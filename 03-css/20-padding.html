@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Template </title>
+    <link rel="stylesheet" href="../03-css/css/master.css">
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Margin </title>
+        <link rel="stylesheet" href="../css/master.css">
+        <style>
+            .bg {
+                background: linear-gradient(135deg,#00000099 10%,transparent 0, transparent 50%,#00000099 0, #00000099 0, 60%, transparent 0, transparent); 
+                background-size: 7.07px 7.07px ;
+             }
+             div.parent {
+                 position: absolute;
+                 height: 340px;
+                 width: 380px;
+                 left: 50%;
+                 transform: translateX(-50%);
+             }
+             div.child {
+                 background-color: #fff;
+                 font-size: 4rem;
+                 text-align: center;
+                 line-height: 12rem;
+                 height: 200px;
+                 width: 200px;
+                 margin-top: 70px;
+                 margin-left: 90px;
+                 /*ShortHand*/
+                 padding: 0 0 0 50px;
+                 
+             }
+             div.child span {
+                background-color: #fff;
+                /*Axis X & Y */
+                padding: 10px;
+                /*ShortHand: padding: top rigth bottom left*/
+                padding-top: 10px;
+                padding-right: 10px;
+                padding-bottom: 10px;
+                padding-left: 10px;
+    
+             }
+    </style>
+    
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1><a href="../03-css/index.html"> 🏡 </a> Template </h1>
+            </header>
+            <section> 
+                <div class="parent">
+                    <div class="child bg">
+                        <span>Box</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+    </html>

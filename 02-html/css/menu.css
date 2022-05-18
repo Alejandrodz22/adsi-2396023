@@ -21,6 +21,10 @@ header h1 {
     color: rgb(255, 255, 255);
     border-bottom: 4px solid rgb(230, 161, 71);
 }
+header h1 a:hover {
+    background-color: #e7d9b1bb;
+    transform: translateX(-10px);
+}
 
 nav {
     display: flex;

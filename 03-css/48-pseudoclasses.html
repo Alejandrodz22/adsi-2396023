@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pseudoclasses </title>
+    <link rel="stylesheet" href="../03-css/css/master.css">
+    <style>
+        nav a:link, 
+        nav a:visited {
+            background-color: rgb(14, 104, 238);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 0px 10px;
+
+        }
+        nav a:hover {
+            background-color: rgba(47, 33, 241, 0.932);
+        }
+        nav a:active{    /*Cuando se le da click*/
+            background-color: rgba(0, 197, 197, 0.836); 
+        }
+        P::first-letter {
+            font-size: 4rem;
+        }
+        P::first-line {
+            background-color: rgba(100, 19, 230, 0.459);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="../03-css/index.html"> 🏡 </a> Pseudoclasses </h1>
+        </header>
+        <section> 
+            <h2>:link | :visited | :hover | :active</h2>
+            <nav>
+        <a href="#"> Home </a>
+        <a href="#"> Services </a>
+        <a href="#"> Contact </a>
+            </nav>
+            <!---->
+            <h2>:first letter | :fisrt line</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sunt inventore voluptate enim quibusdam velit facilis, facere commodi delectus quod vel porro, modi atque beatae est. Harum quis repellendus omnis ab excepturi! Perferendis illum aliquid ipsa ut, dolorem debitis provident!</p>
+        </section>
+    </main>
+</body>
+</html>

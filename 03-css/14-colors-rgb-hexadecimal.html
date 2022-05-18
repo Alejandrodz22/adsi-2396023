@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Colors </title>
+    <link rel="stylesheet" href="../03-css/css/master.css">
+    <style>
+
+        section div.row {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        section div div {
+            width: 20%;
+            height: 100px; 
+            display: inline-block;
+            margin-left: -5px;
+            background-color: silver;
+            text-align: center;
+            line-height: 5rem;
+            color: black;
+            font-size: 0.8rem;
+            transition: all 0.25s ease-in;
+        }
+
+        section div div:hover {
+            transform: scale(1.3);
+        }
+
+        section div div:first-child {
+            margin-left: 0;
+        }
+        section div div:first-child,
+        section div div:last-child {
+            color: white;
+        }
+        /* First row */
+
+        .maroon {background-color: #800000;}
+        .red {background-color: #FF0000;}
+        .orange {background-color: #FFA500;}
+        .yellow {background-color: #FFFF00;}
+        .olive {background-color: #808000;}
+
+        .purple {background-color: #800080;}
+        .fuchsia {background-color: #FF00FF;}
+        .white {background-color: #fff;}
+        .lime {background-color: #00ff00;}
+        .green {background-color: #008000;}
+
+        section div.row.row3 div {
+            width: 25%;
+        }
+
+        section div.row.row3 {
+            width: 80%;
+
+        }
+
+        .navy {background-color: #000080;}
+        .blue {background-color: #0000ff;}
+        .aqua {background-color: #00ffff;}
+        .teal {background-color: #008080;}
+
+        section div.row.row4 div {
+            width: 33.33%;
+        }
+
+
+        .black {background-color: #000;}
+        .silver {background-color: #c0c0c0;}
+        .gray {background-color: #808080;}
+
+        section div.row.row4 {
+            width: 60%;
+        }
+
+        section div.row.row4 div {
+            width: 33.33%;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="../03-css/index.html"> 🏡 </a> Colors </h1>
+        </header>
+        <section> 
+                <div class="row row1">
+                    <div class="maroon">#800000</div>
+                    <div class="red">	#FF0000</div>
+                    <div class="orange">#FFA500</div>
+                    <div class="yellow">#FFFF00</div>
+                    <div class="olive">#808000</div>
+                </div>
+            
+                <!--second row-->
+                <div class="row row2">
+                    <div class="purple">#800080</div>
+                    <div class="fuchsia">#FF00FF</div>
+                    <div class="white">#fff</div>
+                    <div class="lime">#00ff00</div>
+                    <div class="green">#008000</div>
+                </div>
+                
+                <!--third row-->
+                <div class="row row3">
+                    <div class="navy">#000080</div>
+                    <div class="blue">#0000ff</div>
+                    <div class="aqua">#00ffff</div>
+                    <div class="teal">#008080</div>
+                </div>
+
+
+                <div class="row row4">
+                    <div class="black">#000</div>
+                    <div class="silver">#c0c0c0</div>
+                    <div class="gray">#808080</div>
+                </div>
+
+            </section>
+    </main>
+</body>
+</html>

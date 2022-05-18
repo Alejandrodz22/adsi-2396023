@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> background repeat </title>
+    <link rel="stylesheet" href="../03-css/css/master.css">
+    <style>
+        h3 {
+            text-align: center;
+            font-size: 2rem;
+        }
+        section div {
+            background-image: url(../03-css/images/imgs/XMMQUS7ILZDF7ERGYXKT6MSAFE-removebg-preview.png);
+            background-color: #fffa;
+            border: 2px solid;
+            background-size: 10%;
+            border: 2px solid;
+            height: 400px;
+            margin: 0 auto;
+        }
+        section div.box1 {
+            background-repeat:repeat;
+        }
+        section div.box2 {
+            background-repeat:no-repeat;
+        }
+        section div.box3 {
+            background-repeat:repeat-x;
+        }
+        section div.box4 {
+            background-repeat: repeat-y;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="../03-css/index.html"> 🏡 </a> background repeat </h1>
+        </header>
+        <section> 
+            <h3>Repeat</h3>
+            <div class="box1"></div>
+            <!---->
+            <h3>No repeat</h3>
+            <div class="box2"></div>
+            <!---->
+            <h3>Repeat X</h3>
+            <div class="box3"></div>
+            <!---->
+            <h3>Repeat Y</h3>
+            <div class="box4"></div>
+            <!---->
+        </section>
+    </main>
+</body>
+</html>

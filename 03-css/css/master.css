@@ -31,10 +31,9 @@ header h1 a:visited {
     color: #000000;
     padding: 0 6px;
     transition: all 0.2s ease-in;
-
 }
 header h1 a:hover {
-    background-color: #000000bb;
+    background-color: #1f86e6bb;
     transform: translateX(-10px);
 }
 section {

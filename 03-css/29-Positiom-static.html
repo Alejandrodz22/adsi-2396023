@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> position static </title>
+    <link rel="stylesheet" href="../03-css/css/master.css">
+    <style>
+        div.parent,
+        div.parent div,
+        div.parent a {
+            border: 2px solid #000;
+            padding: 5px;
+        }
+        div.parent div {
+            margin: 10px;
+        }
+        div.parent div.child1{
+            height: 60px;
+        }
+        div.parent div.child2{
+            height: 30px;
+        }
+        div.parent div.child3{
+            height: 80px;
+        }
+        div.parent:nth-of-type(2){
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1><a href="../03-css/index.html"> 🏡 </a> position static </h1>
+        </header>
+        <section> 
+            <h3>Block Elements</h3>
+            <div class="parent">
+                <div class="child1">Block element</div>
+                <div class="child2">Block element</div>
+                <div class="child3">Block element</div>
+            </div>
+            <!---->
+            <h3>Inline elements</h3>
+            <div class="parent">
+                <a href="">Inline element</a>
+                <a href="">Other inline element</a>
+            </div>
+                
+        </section>
+    </main>
+</body>
+</html>
