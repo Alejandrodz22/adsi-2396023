@@ -4,7 +4,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: url(../images/bg-css3.jpg) no-repeat center;
+    background: url(../images/bgcss.png) no-repeat center;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
@@ -16,7 +16,7 @@ main {
 }
 
 header h1 {
-    background-color: #0170ba;
+    background-color: #5b595cd8;
     border-bottom: 4px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     padding: 2rem;
@@ -25,7 +25,7 @@ header h1 {
 }
 header h1 a:link,
 header h1 a:visited {
-    background-color: #0170ba;
+    background-color: #ffffff;
     text-decoration: none;
     float: left;
     color: #000000;
@@ -33,11 +33,11 @@ header h1 a:visited {
     transition: all 0.2s ease-in;
 }
 header h1 a:hover {
-    background-color: #1f86e6bb;
+    background-color: #ffffffbb;
     transform: translateX(-10px);
 }
 section {
-    background-color: #ffffffbb;
+    background-color: #ffffffb9;
     color: rgb(0, 0, 0);
     padding: 2rem;
     min-height: 20rem;
