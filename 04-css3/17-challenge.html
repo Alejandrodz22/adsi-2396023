@@ -13,24 +13,125 @@
             width: 400px;
             margin: 0 auto;
             background-repeat: no-repeat;
-            border: 2px solid black;
+            *border: 2px solid black;
       }
       div.bigbox{
-            border: 2px solid #000;
+            *border: 2px solid #000;
             padding: 10px;
             margin: 0 auto;
             width: 990px;
+            height: 300px;
+            
       }
       div.bigbox div {
-          border: 2px solid black;
+          *border: 2px solid black;
           width: 200px;
-          height: 230px;
+          height: 250px;
           margin: 20px;
           display: inline-block;
+          
       }
       div.box1 {
         background: url(../04-css3/images/evan-temp1.jpg) no-repeat center;
-
+        background-size: 200px;
+      }
+      h2.temp {
+          background-color: #00000083;
+          text-align: center;
+          position: relative;
+          top: 190px;
+          height: 40px;
+          color: #fff;
+      }
+      h2.temp:hover {
+          background-color: rgba(72, 5, 180, 0.719);
+      }
+      div.box2 {
+        background: url(../04-css3/images/eva-pelicula-01.jpg) no-repeat center;
+        background-size: 200px;
+      }
+      h2.mov1 {
+          background-color: #00000083;
+          text-align: center;
+          position: relative;
+          top: 190px;
+          height: 40px;
+          color: #fff;
+      }
+      h2.mov1:hover {
+          background-color: rgba(35, 57, 177, 0.719);
+      }
+      div.box3 {
+        background: url(../04-css3/images/eva-pelicula-02.jpg) no-repeat center;
+        background-size: 200px;;
+      }
+      h2.mov2 {
+          background-color: #00000083;
+          text-align: center;
+          position: relative;
+          top: 190px;
+          height: 40px;
+          color: #fff;
+      }
+      h2.mov2:hover {
+          background-color: rgba(161, 111, 18, 0.719);
+      }
+      div.box4 {
+        background: url(../04-css3/images/eva-pelicula-03.jpg) no-repeat center;
+        background-size: 200px;
+      }
+      h2.mov3 {
+          background-color: #00000083;
+          text-align: center;
+          position: relative;
+          top: 190px;
+          height: 40px;
+          color: #fff;
+      }
+      h2.mov3:hover {
+          background-color: rgba(3, 10, 99, 0.719);
+      }
+      div.characters {
+          *border: 2px solid black;
+          width: 1000px;
+          height: 300px;
+          margin: 0 auto;
+      }
+      div.lorem {
+          *border: 2px solid black;
+          width: 600px;
+          height: 200px;
+          position: relative;
+          left: 230px;
+          top: 40px;
+          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      div.img {
+        *border: 2px solid black;
+        width: 200px;
+        height: 200px;
+        bottom: 160px;
+        position: relative;
+        background: url(../04-css3/images/eva01.png);
+      }
+      div.img2 {
+        *border: 2px solid black;
+        width: 200px;
+        height: 200px;
+        bottom: 160px;
+        position: relative;
+        background: url(../04-css3/images/eva-02.png);
+      }
+      div.img3 {
+        *border: 2px solid black;
+        width: 200px;
+        height: 200px;
+        bottom: 160px;
+        position: relative;
+        background: url(../04-css3/images/eva-03.png);
+      }
+      h2{
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       }
     </style>
 </head>
@@ -41,10 +142,33 @@
                 <div class="logo"></div>
                 <br>
                 <div class="bigbox">
-                    <div class="box1"></div>
-                    <div class="box2"></div>
-                    <div class="box3"></div>
-                    <div class="box4"></div>
+                    <div class="box1">
+                        <h2 class="temp">Temp 1</h2>
+                    </div>
+                    <div class="box2">
+                        <h2 class="mov1">Movie 1</h2>
+                    </div>
+                    <div class="box3">
+                        <h2 class="mov2">Movie 2</h2>
+                    </div>
+                    <div class="box4">
+                        <h2 class="mov3">Movie 3</h2>
+                    </div>
+                </div>
+                <br>
+                <div class="characters">
+                    <div class="lorem"> <h2>EVA 01</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum autem adipisci recusandae debitis porro incidunt quaerat voluptatum corporis aliquam officia, corrupti voluptatibus vitae quos, reiciendis ipsum obcaecati quas architecto dolorum dignissimos fugit. Doloribus voluptatibus officiis nihil dolorum minus commodi in. Vero rerum necessitatibus repudiandae iure quos dolores modi mollitia! Laudantium nam cum ea itaque vitae quisquam ad. Provident fugit laborum quis nisi fuga quod rerum aut? Quisquam, impedit facilis eaque nulla nostrum iusto dolore maxime, cumque architecto, ducimus saepe repellat!</div>
+                    <div class="img"></div>
+                </div>
+                <br>
+                <div class="characters">
+                    <div class="lorem"> <h2>EVA 02</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum autem adipisci recusandae debitis porro incidunt quaerat voluptatum corporis aliquam officia, corrupti voluptatibus vitae quos, reiciendis ipsum obcaecati quas architecto dolorum dignissimos fugit. Doloribus voluptatibus officiis nihil dolorum minus commodi in. Vero rerum necessitatibus repudiandae iure quos dolores modi mollitia! Laudantium nam cum ea itaque vitae quisquam ad. Provident fugit laborum quis nisi fuga quod rerum aut? Quisquam, impedit facilis eaque nulla nostrum iusto dolore maxime, cumque architecto, ducimus saepe repellat!</div>
+                    <div class="img2"></div>
+                </div>
+                <br>
+                <div class="characters">
+                    <div class="lorem"> <h2>EVA 02</h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum autem adipisci recusandae debitis porro incidunt quaerat voluptatum corporis aliquam officia, corrupti voluptatibus vitae quos, reiciendis ipsum obcaecati quas architecto dolorum dignissimos fugit. Doloribus voluptatibus officiis nihil dolorum minus commodi in. Vero rerum necessitatibus repudiandae iure quos dolores modi mollitia! Laudantium nam cum ea itaque vitae quisquam ad. Provident fugit laborum quis nisi fuga quod rerum aut? Quisquam, impedit facilis eaque nulla nostrum iusto dolore maxime, cumque architecto, ducimus saepe repellat!</div>
+                    <div class="img3"></div>
                 </div>
             </section>
         </header>
