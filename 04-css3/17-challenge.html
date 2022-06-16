@@ -133,6 +133,34 @@
       h2{
           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       }
+      @media (max-width:960px) {
+        div.bigbox{
+            width: 600px;
+            height: 600px;
+        }
+        div.characters {
+            width: 520px;
+
+        }
+        div.lorem {
+            overflow: hidden;
+            width: 300px;
+        }
+      }
+      @media (max-width:480px){
+        div.bigbox {
+            width: 300px;
+            height: 1200px;
+        }
+        div.lorem {
+            overflow: scroll;
+            width: 200px;
+        }
+        div.characters {
+            width: 400px;
+
+        }
+      }
     </style>
 </head>
 <body>
