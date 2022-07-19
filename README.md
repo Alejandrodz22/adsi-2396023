@@ -3,13 +3,14 @@
 ---
 |theme | description | link 
 | --- | --- | --- |
-|1. emmet      |improves workflow in HTML/CSS     |[open folder](01-emmet/)
-|2. HTML       |Markup languaje (structure)       |[open folder](02-HTML/)
-|3. CSS        |style sheets (presentation)       |[open folder](03-CSS/) 
-|4. CSS 3      |style sheets (presentation)       |[open folder](04-css3/)
-|5. PUG        |preprocessor (HTML)               |[open folder](05-pug/)
-|6. PUG        |preprocessor (CSS)                |[open folder](06-sass/)
-|7. Javascript |programing languaje (client-side) |[open folders](07-Javascript/)
+|01. emmet      |improves workflow in HTML/CSS          |[open folder](01-emmet/)           |
+|02. HTML       |Markup languaje (structure)            |[open folder](02-HTML/)            |
+|03. CSS        |style sheets (presentation)            |[open folder](03-CSS/)             |
+|04. CSS 3      |style sheets (presentation)            |[open folder](04-css3/)            |
+|05. PUG        |preprocessor (HTML)                    |[open folder](05-pug/)             |
+|06. PUG        |preprocessor (CSS)                     |[open folder](06-sass/)            |
+|07. Javascript |programing languaje (client-side)      |[open folders](07-Javascript/)     | 
+|15. CMS |Content management system (client-side) (wp)  |[open folders](15-cms/)            |
 ---
 #|## 01-emmet
 

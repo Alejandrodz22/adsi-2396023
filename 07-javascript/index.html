@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link rel="stylesheet" href="CSS/menu.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Main menu (javascript)</h1>
+        </header>
+        <nav class="menu">
+            <script>
+                const menu = document.querySelector('.menu')
+                const links = [
+                    {
+                        url: '01-write.html',
+                        text: 'write'
+                    },
+                    {
+                        url: '02-comments.html',
+                        text: 'comments'
+                    },
+                    {
+                        url: '03-get-elements.html',
+                        text: 'Get Elements'
+                    },
+                    {
+                        url: '04-variables.html',
+                        text: 'Variables'
+                    },
+                    {
+                        url: '05-variables.html',
+                        text: 'Variables'
+                    },
+                    {
+                        url: '06-variables.html',
+                        text: 'Variables'
+                    },
+                    {
+                        url: '07-variables.html',
+                        text: 'Variables'
+                    },
+                    {
+                        url: '08-variables.html',
+                        text: 'Variables'
+                    },
+                    {
+                        url: '09-variables.html',
+                        text: 'Variables'
+                    },
+                    {
+                        url: '10-variables.html',
+                        text: 'Variables'
+                    },
+
+                ]
+                links.forEach(function (item, index) {
+                    menu.innerHTML += `<li><a href='${item.url}'> <i> ${index+1} </i> ${item.text} </a><li>`
+                })
+            </script>
+        </nav>
+    </main>
+</body>
+</html>
