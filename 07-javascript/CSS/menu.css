@@ -108,7 +108,7 @@ section {
 
 section h1,
 section h2 {
-    color: aqua;
+    color: rgb(0, 0, 0);
     text-align: center;
     border-bottom: 1rem;
     margin-top: 1rem;
