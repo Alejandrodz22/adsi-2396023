@@ -6,243 +6,278 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class vehicle</title> <link rel="stylesheet" href="../07-javascript/CSS/menu.css">
     <link rel="stylesheet" href="">
-<style>
-    /*Dark mode*/
-    main.dark {
-        background: url(bg_dark)no-repeat center;
-    }
+    <style>
+        /* Dark Mode */
+        main.dark {
+            background: url(images/bg-black-mode.svg) no-repeat center;
+        }
+        main.dark section button.btn_mode {
+            background: url(images/btn-mode.svg) no-repeat center;
+        }
+        main.dark header h1 a:is(:link,:visited:focus),
+        main.dark header h1,
+        main.dark h2,
+        main.dark div.attributes {
+            color: #c0d6df;
+        }
+        main.dark div.attributes div.brand {
+            background: url(images/dark-brand.svg) no-repeat center;
+        }
+        main.dark div.attributes div.refer {
+            background: url(images/dark-reference.svg) no-repeat center;
+        }
+        main.dark div.attributes div.model {
+            background: url(images/dark-model.svg) no-repeat center;
+        }
+        main.dark div.attributes div.color {
+            background: url(images/dark-color.svg) no-repeat center;
+        }
+        main.dark figure.landscape {
+            background-color: #0005;
+        }
+        main.dark figure.landscape button.prev {
+            background: url(images/btn-next-dark.svg) no-repeat center;
+        }
+        main.dark figure.landscape button.next {
+            background: url(images/btn-prev-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.on {
+            background: url(images/Play-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.fw {
+            background: url(images/fw-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.stop {
+            background: url(images/Stop-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.bw {
+            background: url(images/Previous-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.off {
+            background: url(images/off-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.on.active {
+            background: url(images/Play-active-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.fw.active {
+            background: url(images/fw-active-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.stop.active {
+            background: url(images/Stop-active-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.bw.active {
+            background: url(images/Previous-active-dark.svg) no-repeat center;
+        }
+        main.dark div.methods button.off.active {
+            background: url(images/off-active-dark.svg) no-repeat center;
+        }
 
-    main.dark section button.btn_mode {
-        background: url(boton_dark_light)no-repeat center;
-    }
-
-    main.dark header h1 a:is(:link,:visited:focus),
-    main.dark header h1,
-    main.dark h2 {
-        color: aliceblue;
-    }
-
-    /* light mode */
-    main.light {
-        height: 680px;
-        width: 500px;
-        border: 4px solid red;
-        background: url() no-repeat;
-    }
-
-    main{
-        background: url()no-repeat center;
-        transition: all 0.4s ease-in;
-    }
-
-    header h1 a:is(:link,:visited),
-    header h1 {
-        color: azure;
-    }
-
-    header h1 small {
-        font-weight: 200;
-    }
-
-    section{position: relative;
-    }
-
-    main.light section button.btn_mode.light {
-        background: url() no-repeat center;
-    }
-
-    section button.btn_mode {
-        background: url();
-        border: none;
-        height: 66px;
-        position: absolute;
-        top: -72px;
-        right: 20px;
-        width: 62px;
-        cursor: pointer;
-        transition: transform 0.2 ease-in;
-    }
-
-    section button.btn_mode:is(:hover) {
-        transform: scale(0.9);
-    }
-
-    main h2 {
-        border: none;
-        text-align: left;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
-        padding-bottom: 0;
-        position: absolute;
-        left: 24px;
-        color: aqua;
-    }
-
-    main h2.subtitle1 {
-        top: -20px;
-    }
-
-    main h2.subtitle2 {
-        top: 444px;
-    }
-
-    div.attributes {
-        color: blueviolet;
-        font-weight: 300;
-        font-size: 14px;
-        margin: 14px auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 10px;
-        text-indent: 10px;
-        line-height: 6rem;
-        width: 360px;
-    }
-
-    div.attributes div {
-        width: 173px;
-        height: 60px;
-    }
-
-    div.attributes div.brand {
-        background: url();
-        border-radius: 16px;
-    }
-
-    div.attributes div.refer {
-        background: url();
-        border-radius: 16px;
-    }
-
-    div.attributes div.model {
-        background: url();
-        border-radius: 16px;
-    }
-
-    div.attributes div.color {
-        background: url();
-        border-radius: 16px;
-    }
-
-    figure.landscape {
-        background-color: cyan;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        height: 260px;
-        width: 360px;
-    }
-
-    figure.landscape button {
-        cursor: pointer;
-        border: none;
-        height: 48px;
-        width: 48px;
-        transition: transform 0.2s ease-in;
-    }
-    
-    figure.landscape button.prev:is(:hover){
-        transform: translateX(-2px);
-    }
-
-    figure.landscape button.next:is(:hover){
-        transform: translateX(2px);
-    }
-
-    figure.landscape button.prev {
-        background: url(boton_previo);
-    }
-    
-    figure.landscape button.next {
-        background: url(boton_siguiente);
-    }
-
-    figure img.car {
-        position: relative;
-        bottom: -92px;
-    }
-
-    div.methods {
-        margin: 50px auto 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 360px;
-    }
-
-    div.methods button {
-        border: none;
-        width: 60px;
-        height: 56px;
-        transition: transform 0.2 ease-in;
-    }
-
-    div.methods button:is(:hover) {
-        transform: scale(0.9);
-    }
-
-    /*Actives*/
-    div.methods button.on {
-        background: url(boton_encendido)no-repeat center;
-    }
-    
-    div.methods button.fw {
-        background: url()no-repeat center;
-    }
-
-    div.methods button.stop{
-        background: url(boton_detener)no-repeat center;
-    }
-    
-    div.methods button.bw {
-        background: url()no-repeat center;
-    }
-
-    div.methods button.off {
-        background: url(boton_apagado)no-repeat center;
-    }
-    img.car.on {
-        animation: animMain 0.2s linear infinite;
-    }
-    @keyframes animCar {
-        0%, 100% {transform: translateY(0);}
-        5% {transform: translateY(-3px);}
-    }
-</style>
+        /* Light Mode */
+        main {
+            background: url(images/bg-light.svg) no-repeat center;
+            transition: all 0.4s ease-in;
+        }
+        header h1 a:is(:link,:visited:focus),
+        header h1 {
+            color: #4f6d7a;
+        }
+        header h1 small {
+            font-weight: 200;
+        }
+        section {
+            position: relative;
+        }
+        section button.btn_mode {
+            background: url(images/btn-mode-light.svg) no-repeat center;
+            border: none;
+            cursor: pointer;
+            height: 66px;
+            position: absolute;
+            top: -72px;
+            right: 20px;
+            width: 62px;
+            transition: transform 0.2s ease-in;
+        }
+        section button.btn_mode:is(:hover) {
+            transform: scale(0.9);
+        }
+        main h2 {
+            border: none;
+            text-align: left;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            padding-bottom: 0;
+            position: absolute;
+            left: 24px;
+            color: #4f6d7a;
+        }
+        main h2.subtitle1 {
+            top: -20px;
+        }
+        main h2.subtitle2 {
+            top: 444px;
+        }
+        div.attributes {
+            color: #4f6d7a;
+            font-weight: 300;
+            font-size: 14px;
+            margin: 14px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            text-indent: 10px;
+            line-height: 6rem;
+            width: 360px;
+        }
+        div.attributes div {
+            width: 173px;
+            height: 68px;
+        }
+        div.attributes div.brand {
+            background: url(images/Brand-light.svg) no-repeat center;
+        }
+        div.attributes div.refer {
+            background: url(images/Reference-light.svg) no-repeat center;
+        }
+        div.attributes div.model {
+            background: url(images/Model-light.svg) no-repeat center;
+        }
+        div.attributes div.color {
+            background: url(images/Color-light.svg) no-repeat center;
+        }
+        figure.landscape {
+            background-color: #fff5;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            height: 260px;
+            width: 360px;
+        }
+        figure.landscape button {
+            cursor: pointer;
+            border: none;
+            height: 48px;
+            width: 48px;
+            transition: transform 0.2s ease-in;
+        }
+        figure.landscape button.prev:is(:hover) {
+            transform: translateX(-5px);
+        }
+        figure.landscape button.next:is(:hover) {
+            transform: translateX(5px);
+        }
+        figure.landscape button.prev {
+            background: url(images/btn-prev-light.svg) no-repeat center;
+        }
+        figure.landscape button.next {
+            background: url(images/btn-next-light.svg) no-repeat center;
+        }
+        figure.landscape img.car {
+            position: relative;
+            bottom: -92px;
+        }
+        div.methods {
+            margin: 44px auto 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 360px;
+        }
+        div.methods button {
+            border: none;
+            cursor: pointer;
+            height: 66px;
+            width: 62px;
+            transition: transform 0.2s ease-in;
+        }
+        div.methods button:is(:hover) {
+            transform: scale(0.9);
+        }
+        div.methods button.on {
+            background: url(images/Play-light.svg) no-repeat center;
+        }
+        div.methods button.fw {
+            background: url(images/Next-light.svg) no-repeat center;
+        }
+        div.methods button.stop {
+            background: url(images/Stop-light.svg) no-repeat center;
+        }
+        div.methods button.bw {
+            background: url(images/bw-light.svg) no-repeat center;
+        }
+        div.methods button.off {
+            background: url(images/off-light.svg) no-repeat center;
+        }
+        /* Actives */
+        div.methods button.on.active {
+            background: url(images/Play-active-light.svg) no-repeat center;
+        }
+        div.methods button.fw.active {
+            background: url(images/Next-active-light.svg) no-repeat center;
+        }
+        div.methods button.stop.active {
+            background: url(images/Stop-active-light.svg) no-repeat center;
+        }
+        div.methods button.bw.active {
+            background: url(images/bw-active-light.svg) no-repeat center;
+        }
+        div.methods button.off.active {
+            background: url(images/off-active-light.svg) no-repeat center;
+        }
+        main.animate {
+            animation: animMain 0.2s ease-in 1;
+        }
+        @keyframes animMain {
+            0%  { 
+                transform: scale(1);
+            }
+            50%  { 
+                transform: scale(0.9);
+            }
+            100% { 
+                transform: scale(1);
+            }
+        }
+        img.car.on {
+             animation: animCar 0.1s linear infinite;
+        }
+        @keyframes animCar {
+            0%, 100% { transform: translateY(0); }
+            5%       { transform: translateY(-4px); }
+        }
+    </style>
 </head>
 <body>
     <main>
         <header>
             <h1>
-                <a href="index.html"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
-                  </svg>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                    </svg>
                 </a>
-                <small>Class</small>Vehicle
+                <small>class</small>Vehicle
             </h1>
         </header>
         <section>
             <button class="btn_mode"></button>
-            <h2 class="subtitle1">attributes:</h2>
+            <h2 class="subtitle1">Attributes:</h2>
             <div class="attributes">
                 <div class="brand"></div>
                 <div class="refer"></div>
                 <div class="model"></div>
                 <div class="color"></div>
             </div>
-
             <figure class="landscape">
-                <img src="" class="car">
                 <button class="prev"></button>
+                <img src="" class="car">
                 <button class="next"></button>
             </figure>
-        
-            <h2 class="subtitle2">methods:</h2>
+            <h2 class="subtitle2">Methods:</h2>
             <div class="methods">
                 <button class="on"></button>
                 <button class="fw"></button>
@@ -252,7 +287,6 @@
             </div>
         </section>
     </main>
-
     <script>
         const main     = document.querySelector('main')
         const btn_mode = document.querySelector('.btn_mode')
@@ -264,44 +298,50 @@
         const btn_off  = document.querySelector('.off')
         const btns_methods = document.querySelectorAll('.methods button')
 
-        const e_brand = document.querySelector('.brand')
-        const e_refer = document.querySelector('.refer')
-        const e_model = document.querySelector('.model')
-        const e_color = document.querySelector('.color')
-        const e_image = document.querySelector('.car')
+        const e_brand  = document.querySelector('.brand') 
+        const e_refer  = document.querySelector('.refer') 
+        const e_model  = document.querySelector('.model') 
+        const e_color  = document.querySelector('.color')  
+        const e_image  = document.querySelector('.car')  
 
         var index_attr = 0
 
         const btn_prev = document.querySelector('.prev')
         const btn_next = document.querySelector('.next')
 
-        //logic
+        // Logic 
         var engine = false
 
-
-        //Array Object
+        // Array Object
         const vehicles = [
-            {
-                Brand: 'Ferrari',
-                refer: '812Gts',
-                model: 2020,
-                color: 'orange',
-                image: ''
-            },
-            {
-                Brand: 'Ferrari',
-                refer: '812Gts',
-                model: 2020,
-                color: 'orange',
-                image: ''
-            },
-            {
-                Brand: 'Ferrari',
-                refer: '812Gts',
-                model: 2020,
-                color: 'orange',
-                image: ''
-            }
+                { 
+                    brand: 'Toyota',  
+                    refer: 'Yaris',  
+                    model: 2020, 
+                    color: 'Orange', 
+                    image: '../images/car1.jpg' 
+                },
+                { 
+                    brand: 'Renault', 
+                    refer: 'Clio',   
+                    model: 2018, 
+                    color: 'Green',  
+                    image: 'images/car03.png' 
+                },
+                { 
+                    brand: 'Ford',    
+                    refer: 'Fiesta', 
+                    model: 2016, 
+                    color: 'Blue',   
+                    image: 'images/vehicle/car03.png' 
+                },
+                { 
+                    brand: 'Fiat',    
+                    refer: '500',    
+                    model: 2007, 
+                    color: 'Red',    
+                    image: 'images/vehicle/car04.png' 
+                }
         ]
         class Vehicle {
             constructor(brand, refer, model, color, image) {
@@ -312,91 +352,93 @@
                 this.image = image
             }
             getInfo() {
+                //return `The brand is: ${this.brand}`
                 e_brand.textContent = this.brand
                 e_refer.textContent = this.refer
                 e_model.textContent = this.model
                 e_color.textContent = this.color
-                e_image.setAttibute ('src', this.image)
+                e_image.setAttribute('src', this.image)
             }
             static startEngine() {
                 if (!engine) {
                     e_image.classList.add('on')
+                    engine = true
                 }
             }
-            static offEngine(){
+            static offEngine() {
                 if(engine) {
                     e_image.classList.remove('on')
                     engine = false
                 }
             }
         }
-
-        //Accions
+        // Actions
         btn_mode.addEventListener('click', e=> {
             e.preventDefault()
             e.stopPropagation()
-            main.classList.toggle('light')
+            main.classList.toggle('dark')
         })
-
-        btn_on.addEventListener('click', (event) =>{
+        btn_on.addEventListener('click', (event) => {
             removeActives()
             Vehicle.startEngine()
-            btn_on.classList.add('actived')
+            btn_on.classList.add('active')
         })
-
-        btn_fw.addEventListener('click', (event) =>{
+        btn_fw.addEventListener('click', (event) => {
             removeActives()
-            btn_fw.classList.add('actived')
+            btn_fw.classList.add('active')
         })
-
-        btn_stop.addEventListener('click', (event) =>{
+        btn_stop.addEventListener('click', (event) => {
             removeActives()
-            btn_stop.classList.add('actived')
+            btn_stop.classList.add('active')
         })
-
-        btn_bw.addEventListener('click', (event) =>{
+        btn_bw.addEventListener('click', (event) => {
             removeActives()
-            btn_bw.classList.add('actived')
+            btn_bw.classList.add('active')
         })
-
-        btn_off.addEventListener('click', (event) =>{
+        btn_off.addEventListener('click', (event) => {
             removeActives()
             Vehicle.offEngine()
-            btn_off.classList.add('actived')
+            btn_off.classList.add('active')
         })
-        
         btn_prev.addEventListener('click', (event) => {
-            if(index_attr > 0) {
+            if (index_attr > 0) {
                 index_attr--
-                function showAttributes()
+                animateMain()
+                showAttributes()
             }
-        } )
-
-        btn_next.addEventListener('click', (event) => {
-            if(index_attr < vehicles.length-1) {
-                index_attr++
-                function showAttributes()
-            }
-        } )
-
-        //Functions
-        function removeActives()
-        btns_methods.forEach(element => {
-            element.classList.remove('active')
         })
-
+        btn_next.addEventListener('click', (event) => {
+            if (index_attr < vehicles.length-1) {
+                index_attr++
+                animateMain()
+                showAttributes()
+            }
+        })
+        // Functions
+        function animateMain() {
+            main.classList.add('animate')
+            setTimeout(() => {
+                main.classList.remove('animate')
+            }, 500)
+        }
+        function removeActives() {
+            btns_methods.forEach(element => {
+                element.classList.remove('active')
+            })
+        }
         function showAttributes() {
-        let vh = new Vehicle(vehicles[index_attr].brand,
-                               vehicles[index_attr].refer,
-                               vehicles[index_attr].model,
-                               vehicles[index_attr].color,
-                               vehicles[index_attr].image,)
-                            
-        vh.getInfo()
-    }
-    showAttributes()
-        console.log(vh)
-        console.log(vh.getInfo())
+            // New Vehicle 
+            let vh = new Vehicle(vehicles[index_attr].brand, 
+                                 vehicles[index_attr].refer, 
+                                 vehicles[index_attr].model, 
+                                 vehicles[index_attr].color,
+                                 vehicles[index_attr].image)
+            // Access to Methods
+            vh.getInfo()
+        }
+        showAttributes()
+        //console.log(vh)
+        //console.log(vh.getInfo())
     </script>
 </body>
 </html>
