@@ -156,6 +156,8 @@
             margin: 0 auto;
             height: 260px;
             width: 360px;
+            position: relative;
+            z-index: 2;
         }
         figure.landscape button {
             cursor: pointer;
@@ -180,6 +182,14 @@
             position: relative;
             bottom: -92px;
         }
+
+        figure img.car {
+            position: relative;
+            bottom: -40px;
+            z-index: 4;
+            top: 80px;
+        }
+
         div.methods {
             margin: 44px auto 0 auto;
             display: flex;
@@ -249,6 +259,67 @@
             0%, 100% { transform: translateY(0); }
             5%       { transform: translateY(-4px); }
         }
+
+        figure.parallax {
+            border: 2px solid rgb(255, 0, 0);
+            width: 360px;
+            height: 260px;
+            position: absolute;
+            left: -13px;
+            top: 176px;
+            border-radius: 5px;
+            overflow-y: hidden;
+            z-index: 1;
+        }
+
+        figure.parallax div {
+            position: absolute;
+            height: 260px;
+            top: 0;
+            left: 0;
+            width: 720px;
+        }
+
+        figure.parallax div.layer1 {
+            background: url(../07-javascript/images/layer-1.svg) repeat-x;
+            z-index: 3;
+            position: absolute;
+            top: 165;
+        }
+
+        figure.parallax div.layer2 {
+            background: url(images/city.svg) repeat-x;
+            z-index: 2;
+        }
+
+        figure.parallax div.layer3 {
+            background: url(images/sky.svg) repeat-x;
+            z-index: 1;
+        }
+
+        figure.parallax.play div.layer1 {
+            animation: 3s animLayers linear infinite;
+        }
+
+        figure.parallax.play div.layer2 {
+            animation: 9s animLayers linear infinite;
+        }
+
+        figure.parallax.play div.layer3 {
+            animation: 12s animLayers linear infinite;
+        }
+
+        @keyframes animLayers {
+            100% {
+                background-position: -720px;
+            }
+        }
+        figure.parallax.play.stop div.layer1,
+        figure.parallax.play.stop div.layer2,
+        figure.parallax.play.stop div.layer3 {
+            animation-play-state: paused
+        }
+
     </style>
 </head>
 <body>
@@ -272,11 +343,19 @@
                 <div class="model"></div>
                 <div class="color"></div>
             </div>
+
+            <figure class="parallax">
+                <div class="layer1"></div>
+                <div class="layer2"></div>
+                <div class="layer3"></div>
+            </figure>
+
             <figure class="landscape">
                 <button class="prev"></button>
                 <img src="" class="car">
                 <button class="next"></button>
             </figure>
+
             <h2 class="subtitle2">Methods:</h2>
             <div class="methods">
                 <button class="on"></button>
@@ -308,9 +387,11 @@
 
         const btn_prev = document.querySelector('.prev')
         const btn_next = document.querySelector('.next')
-
+        const parallax = document.querySelector('.parallax')
+ 
         // Logic 
         var engine = false
+        var moveon = false
 
         // Array Object
         const vehicles = [
@@ -319,28 +400,28 @@
                     refer: 'Yaris',  
                     model: 2020, 
                     color: 'Orange', 
-                    image: '../images/car1.jpg' 
+                    image: 'images/car1.png' 
                 },
                 { 
                     brand: 'Renault', 
                     refer: 'Clio',   
                     model: 2018, 
                     color: 'Green',  
-                    image: 'images/car03.png' 
+                    image: 'images/car2.png' 
                 },
                 { 
                     brand: 'Ford',    
                     refer: 'Fiesta', 
                     model: 2016, 
                     color: 'Blue',   
-                    image: 'images/vehicle/car03.png' 
+                    image: 'images/car3.png' 
                 },
                 { 
                     brand: 'Fiat',    
                     refer: '500',    
                     model: 2007, 
                     color: 'Red',    
-                    image: 'images/vehicle/car04.png' 
+                    image: 'images/car4.png' 
                 }
         ]
         class Vehicle {
@@ -360,17 +441,25 @@
                 e_image.setAttribute('src', this.image)
             }
             static startEngine() {
-                if (!engine) {
                     e_image.classList.add('on')
                     engine = true
-                }
+                
             }
             static offEngine() {
-                if(engine) {
                     e_image.classList.remove('on')
                     engine = false
-                }
             }
+            
+            static goForward() {
+                    parallax.classList.add('play')
+                    parallax.classList.remove('stop')
+                    moveon = true
+            }
+            static stopCar() {
+                parallax.classList.add('stop')
+                moveon = false
+            }
+
         }
         // Actions
         btn_mode.addEventListener('click', e=> {
@@ -379,26 +468,36 @@
             main.classList.toggle('dark')
         })
         btn_on.addEventListener('click', (event) => {
+            if (!engine) {
             removeActives()
             Vehicle.startEngine()
             btn_on.classList.add('active')
+        }    
         })
         btn_fw.addEventListener('click', (event) => {
+            if (engine) {
             removeActives()
+            Vehicle.goForward()
             btn_fw.classList.add('active')
+        }
         })
         btn_stop.addEventListener('click', (event) => {
+            if (moveon) {
             removeActives()
+            Vehicle.stopCar()
             btn_stop.classList.add('active')
+        }
         })
         btn_bw.addEventListener('click', (event) => {
             removeActives()
             btn_bw.classList.add('active')
         })
         btn_off.addEventListener('click', (event) => {
+            if (engine && !moveon) {
             removeActives()
             Vehicle.offEngine()
             btn_off.classList.add('active')
+        }
         })
         btn_prev.addEventListener('click', (event) => {
             if (index_attr > 0) {
