@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Calc</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        main {
+            background: url(images/bg-dark.svg) no-repeat center;
+        }
+        header h1 a:is(:link) {
+            color: #cbcddb;
+            margin-top: 40px;
+        }
+        header button.mode {
+            border: none;
+            background: url(images/btn-mode-calc.svg) no-repeat center;
+            height: 40px;
+            margin-left: 300px;
+            display: block;
+            transition: all 0.2s ease-in;
+            width: 120px;
+        }
+        header button.mode:is(:hover, :focus) {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+        div.display {
+            display: flex;
+            flex-direction: column;
+            margin: 30px 40px;
+            text-align: right;
+        }
+        div.display output.operation {
+            position: relative;
+            margin-bottom: 9.px;
+            right: 25px;
+            font-weight: 275;
+            font-size: 28px;
+            color: #6E768A;
+        }
+        div.display output.result {
+            position: relative;
+            right: 50px;
+            font-weight: 275;
+            font-size: 40px;
+            color: #ffffff;
+        }
+        div.buttons {
+            display: grid;
+            gap: 14px;
+            margin-top: 50px;
+            justify-content: center;
+            grid-template-columns: repeat(4, 68px);
+            grid-template-rows: repeat(5, 68px);
+        }
+        div.buttons button {
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease-in;
+        }
+
+        button.clear {
+            position: relative;
+            width: 400px;
+            left: 100px;
+            bottom: 443px;
+        }
+        div.line{
+            position: relative;
+            width: 380px;
+            height: 10px;
+            bottom: 460px;
+        }
+
+        header h1 a:link,
+        header h1 a:visited {
+        margin-top: 70px;
+        display: flex;
+        color: #83CC26;
+        position: absolute;
+        }
+        
+        div.line {
+            background: url(images/Line-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.seven {
+            background: url(images/7-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.eight {
+            background: url(images/8-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.nine {
+            background: url(images/9-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.plus {
+            background: url(images/+-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.four {
+            background: url(images/4-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.five {
+            background: url(images/5-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.six {
+            background: url(images/6-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.less {
+            background: url(images/--dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.one {
+            background: url(images/1-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.two {
+            background: url(images/2-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.three {
+            background: url(images/3-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.multiplication {
+            background: url(images/X-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.dot {
+            background: url(images/dot-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.cero {
+            background: url(images/0-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.division {
+            background: url(images/division-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.same {
+            background: url(images/=-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button.clear {
+            background: url(images/Delete-dark-mode.svg) no-repeat center;
+        }
+        div.buttons button:is(:hover, :focus) {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </h1>
+            <button class="mode"></button>
+        </header>
+        <section>
+            <div class="display">
+                <output class="operation"></output>
+                <output class="result"></output>
+            </div>
+            <div class="buttons">
+                <button class="seven"           data-num="7"></button>
+                <button class="eight"           data-num="8"></button>
+                <button class="nine"            data-num="9"></button>
+                <button class="plus"            data-opr="+"></button>
+                <button class="four"            data-num="4"></button>
+                <button class="five"            data-num="5"></button>
+                <button class="six"             data-num="6"></button>
+                <button class="less"            data-opr="-"></button>
+                <button class="one"             data-num="1"></button>
+                <button class="two"             data-num="2"></button>
+                <button class="three"           data-num="3"></button>
+                <button class="multiplication"  data-opr="*"></button>
+                <button class="dot"             data-opr="."></button>
+                <button class="cero"            data-num="0"></button>
+                <button class="division"        data-opr="/"></button>
+                <button class="same"            data-opr="="></button>
+                <button class="clear"           data-opr=""></button>
+            </div>
+            <div class="line">
+            </div>
+        </section>
+    </main>
+    <script>
+        const mode = document.querySelector('.mode')
+        const main = document.querySelector('main')
+        const oper = document.querySelector('.operation')
+        const clear = document.querySelector('.borrar')
+
+        //numbers & operators
+        const nums = document.querySelectorAll('button[data-num]')
+        const oprs = document.querySelectorAll('button[data-opr]')
+
+        //logic
+        var operStatus = false
+
+        //click buttons
+        nums.forEach(element => {
+            element.addEventListener('click', () => {
+                if (oper.textContent.length < 18) {
+                    oper.textContent += element.getAttribute('data-num')
+                    operStatus = true
+                }
+            })
+        })
+
+        oprs.forEach(element => {
+            element.addEventListener('click', () => {
+                if (oper.textContent.length < 18) {
+                    if (operStatus) {
+                        oper.textContent += element.getAttribute ('data-opr')
+                        operStatus = false
+                    }
+                }
+            })
+        })
+
+        mode.addEventListener('click', (e) => {
+            main.classList.toggle('light')
+        })
+
+        document.addEventListener('keyup', (evt) => {
+            console.log(evt.keyCode)
+
+            switch (evt.keyCode) {
+             case 96:
+             case 48:
+             oper.textContent += 0
+             break;
+
+             case 97:
+             case 49:
+             oper.textContent += 1
+             break;
+
+             case 98:
+             case 50:
+             oper.textContent += 2
+             break;
+
+             case 99:
+             case 51:
+             oper.textContent += 3
+             break;
+
+             case 100:
+             case 52:
+             oper.textContent += 4
+             break;
+
+             case 101:
+             case 53:
+             oper.textContent += 5
+             break;
+
+             case 102:
+             case 54:
+             oper.textContent += 6
+             break;
+
+             case 103:
+             case 55:
+             oper.textContent += 7
+             break;
+
+             case 104:
+             case 56:
+             oper.textContent += 8
+             break;
+
+             case 105:
+             case 57:
+             oper.textContent += 9
+             break;
+
+            }
+        })
+
+    </script>
+</body>
+</html>
